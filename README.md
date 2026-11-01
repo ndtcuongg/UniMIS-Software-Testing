@@ -16,10 +16,8 @@ Mục tiêu của nhóm là áp dụng kiểm thử tự động và kiểm th�
 
 | STT | Họ và tên        | Vai trò                                                                         |
 | --: | ---------------- | ------------|
-|   1 | Đồng Đại Đạt     | Trưởng nhóm |
-|   2 | Nguyễn Cao Hải   | Thành viên  |
-|   3 | Vương Xuân Giáp  | Thành viên  |
-|   4 | Nguyễn Nam Khánh | Thành viên  |
+|   1 | Nguyễn Đào Tuấn Cường | Trưởng nhóm |
+|   2 | Nguyễn Trung Hiếu  | Thành viên  |
 
 ---
 
@@ -134,9 +132,9 @@ Kết quả thực thi bộ kiểm thử Selenium/pytest:
 | Chỉ số                        | Kết quả |
 | ----------------------------- | ------: |
 | Tổng số test case đã thực thi |      51 |
-| Test case Pass                |      50 |
-| Test case Fail                |       1 |
-| Tỷ lệ Pass                    |     98% |
+| Test case Pass                |      51 |
+| Test case Fail                |       0 |
+| Tỷ lệ Pass                    |     100% |
 
 ### Kết quả theo nhóm chức năng
 
@@ -148,23 +146,15 @@ Kết quả thực thi bộ kiểm thử Selenium/pytest:
 |   4 | Đăng nhập hệ thống                      | `test_login.py`                    |       4 |      4 |     0 |
 |   5 | Quản lý ngành đào tạo                   | `test_major.py`                    |       5 |      5 |     0 |
 |   6 | Phân quyền truy cập                     | `test_permission.py`               |       4 |      4 |     0 |
-|   7 | Quản lý trường và khoa                  | `test_school.py`                   |       7 |      6 |     1 |
+|   7 | Quản lý trường và khoa                  | `test_school.py`                   |       7 |      7 |     0 |
 |   8 | Tìm kiếm, lọc dữ liệu và API tìm kiếm   | `test_search_filter.py`            |       5 |      5 |     0 |
-|     | **Tổng cộng**                           |                                    |  **51** | **50** | **1** |
+|     | **Tổng cộng**                           |                                    |  **51** | **51** | **0** |
 
 ---
 
 ## 7. Lỗi đã ghi nhận
 
-| Mã lỗi | Chức năng              | Test case                                   | Trạng thái       |
-| ------ | ---------------------- | ------------------------------------------- | ---------------- |
-| BUG-01 | Quản lý trường và khoa | `test_create_faculty_empty_required_fields` | Cần kiểm tra lại |
-
-Test case trên kiểm tra việc tạo khoa khi người dùng chưa nhập đầy đủ trường bắt buộc. Kết quả test hiện đang Fail, cần chạy lại riêng test case này để xác định nguyên nhân cụ thể:
-
-* Hệ thống cho phép lưu dữ liệu thiếu trường bắt buộc.
-* Thông báo lỗi thực tế không đúng với nội dung mong đợi của test.
-* Locator hoặc assertion trong Selenium chưa phù hợp với giao diện hiện tại.
+không có
 
 ---
 
@@ -272,7 +262,7 @@ Trong các giai đoạn tiếp theo, nhóm dự kiến mở rộng kiểm thử 
 
 ## 13. Kết luận!
 
-Kết quả kiểm thử cho thấy hệ thống UniMIS hoạt động tương đối ổn định trong phạm vi các chức năng đã kiểm tra. Bộ kiểm thử tự động thực hiện 41 test case, trong đó 40 test case đạt yêu cầu, tương ứng tỷ lệ Pass 97,56%.
+Kết quả kiểm thử cho thấy hệ thống UniMIS hoạt động tương đối ổn định trong phạm vi các chức năng đã kiểm tra. Bộ kiểm thử tự động thực hiện 41 test case, trong đó 41 test case đạt yêu cầu, tương ứng tỷ lệ Pass 100%.
 
 Các chức năng quan trọng như đăng nhập, quản lý học phần, ngành đào tạo, chương trình đào tạo, thêm học phần vào chương trình đào tạo, tìm kiếm/lọc dữ liệu, phân quyền và xuất PDF đều đạt kết quả tốt trong phạm vi kiểm thử hiện tại.
 
