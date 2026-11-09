@@ -25,4 +25,4 @@ selenium_tests/config.py
 # PostgreSQL database backups
 *.dump
 unimis/settings_local.py
-*.dump
+*.dumpBaoCaoGiuaKi/
